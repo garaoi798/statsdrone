@@ -1,0 +1,27 @@
+{
+  "name": "statsdrone",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build-dev:css": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css --watch",
+    "build:css": "npx @tailwindcss/cli -i ./src/input.css -o ./dist/output.css",
+    "build": "npm run build:css && cpy index.html dist && cpy src/styles/**/* dist/styles && cpy src/assets/**/* dist/assets",
+    "dev": "serve .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "cpy-cli": "^5.0.0",
+    "postcss": "^8.5.6",
+    "rimraf": "^6.0.1",
+    "serve": "^14.2.4",
+    "tailwindcss": "^4.1.11"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.11"
+  }
+}

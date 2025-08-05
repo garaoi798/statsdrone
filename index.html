@@ -1,165 +1,406 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tailwind Test</title>
-  <link href="/output.css" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./src/output.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
-<body class="font-montserrat text-gray-800">
-  <div class="grid gap-10 md:gap-6 lg:gap-20 pb-20">
-    <!-- Header -->
-    <header class="w-full p-4 md:p-6 xl:p-12">
-      <div class="max-w-screen-lg mx-auto grid place-items-center md:place-items-start">
-        <a href="#"><img src="./assets/logo.svg" alt=""></a>
+<body class="font-montserrat text-[#FFFFFF]">
+  <div class="bg-[url('assets/bg.png')] bg-cover bg-center w-full h-[944px]">
+      <header class="w-full max-w-[1371px] mx-auto">
+        <div class="flex items-center justify-between py-[35px]">
+          <div>
+            <img src="./src/assets/nav-logo.svg" alt="nav-logo">
+          </div>
+          <div class="flex gap-x-5 items-center">
+            <select class=" text-[#FF853A] font-semibold text-[18px]" name="Integration"> 
+              <option value="#">Integration</option>
+            </select>
+            <select class=" text-[#FFFFFF] font-semibold text-[18px]" name="Platform">
+              <option value="#">Platform</option>
+            </select>
+            <select class=" text-[#FFFFFF] font-semibold text-[18px]" name="For Affiliates">
+              <option value="#">For Affiliates</option>
+            </select>
+            <select class=" text-[#FFFFFF] font-semibold text-[18px]" name="Resources">
+              <option value="#">Resources</option>
+            </select>
+            <a class="no-underline text-[#FFFFFF] font-semibold text-[18px]" href="#">Pricing</a>
+          </div>
+        
+          <div class="flex items-center gap-x-4">
+            <a href="#" class="text-[14px] font-normal text-[#FFFFFF]">Login</a>
+            <button class="bg-none border rounded-[9px] border-[#FFFFFF] text-[#FFFFFF] px-4 py-2 text-[14px] font-normal hover:cursor-pointer">Book a demo</button>
+            <button class="bg-[linear-gradient(to_right,_#FF8E5A,_#D86631)] text-white px-4 py-2 text-[14px] font-normal rounded-[9px] hover:cursor-pointer">Get started</button>
+          </div>
+        </div>
+      </header>
+    <div class="xl-container">
+      <div class="flex items-center flex-col gap-y-8 justify-center">
+        <div class="flex gap-x-4 items-center mt-7">
+          <div class="h-[25px]"><img class=" object-cover h-full" src="assets/greenstar.png" alt=""></div>
+          <div class= "text-[14px] font-normal">Rated <span class="font-bold">Excellent</span> by 10+ customers on</div>
+          <div class="h-[23px]"><img class=" object-cover h-full" src="assets/trustpilot.png" alt=""></div>
+        </div>
+        <h2 class="text-[38px] font-extrabold max-w-[900px] text-center">Save time & monitor all of your daily affiliate program stats <span class="text-[#FFBB6E]">in 1 place!</span></h2>
+
+        <button class="flex items-center bg-[linear-gradient(to_right,_#FF8E5A,_#D86631)] px-4 py-2 text-[18px] gap-x-4 font-normal rounded-[9px] hover:cursor-pointer">
+          Get started now
+          <svg width="32" height="24" viewBox="0 -6.5 36 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000" stroke="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>right-arrow</title> <desc>Created with Sketch.</desc> <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"> <g id="ui-gambling-website-lined-icnos-casinoshunter" transform="translate(-212.000000, -159.000000)" fill="#ffffff" fill-rule="nonzero"> <g id="square-filled" transform="translate(50.000000, 120.000000)"> <path d="M187.108012,39.2902857 L197.649804,49.7417043 L197.708994,49.7959169 C197.889141,49.9745543 197.986143,50.2044182 198,50.4382227 L198,50.5617773 C197.986143,50.7955818 197.889141,51.0254457 197.708994,51.2040831 L197.6571,51.2479803 L187.108012,61.7097143 C186.717694,62.0967619 186.084865,62.0967619 185.694547,61.7097143 C185.30423,61.3226668 185.30423,60.6951387 185.694547,60.3080911 L194.702666,51.3738496 L162.99947,51.3746291 C162.447478,51.3746291 162,50.9308997 162,50.3835318 C162,49.8361639 162.447478,49.3924345 162.99947,49.3924345 L194.46779,49.3916551 L185.694547,40.6919089 C185.30423,40.3048613 185.30423,39.6773332 185.694547,39.2902857 C186.084865,38.9032381 186.717694,38.9032381 187.108012,39.2902857 Z M197.115357,50.382693 L186.401279,61.0089027 L197.002151,50.5002046 L197.002252,50.4963719 L196.943142,50.442585 L196.882737,50.382693 L197.115357,50.382693 Z" id="right-arrow"> </path> </g> </g> </g> </g></svg> 
+        </button>
+        <span class="mt-[-20px] text-[#DCDCDC] font-normal text-base">No credit card needed</span>
+
+        <div class="max-w-[1021px]">
+          <img src="./src/assets/heroimg.png" alt="">
+        </div>
+
       </div>
-    </header>
 
-    <!-- Responsive Layout -->
-    <div class="px-6 lg:px-12 grid grid-cols-1 md:grid-cols-[1fr_320px] xl:grid-cols-[auto_1fr_auto] gap-12">
-      <!-- Left Sidebar -->
-      <aside class="hidden max-w-xs shrink-0 order-1 xl:block lg:order-none">
-        <div class="flex items-center gap-4 pb-6 pl-3">
-          <p class="font-bold text-lg flex-1">Article contents</p>
-          <span class="grid">
-            <!-- SVG unchanged -->
-          </span>
-        </div>
-        <nav class="space-y-5 text-sm text-gray-700">
-          <p class="cursor-pointer pl-4 font-light">Article overview</p>
-          <p class="cursor-pointer pl-4 font-light">This is why we can’t have nice things</p>
-          <p class="cursor-pointer pl-4 font-light border-l-2 border-orange-500 pl-3">
-            Why do we have to have this complex menu and what can we do about it?
-          </p>
-          <p class="cursor-pointer pl-4 font-light">5 reasons not to exit</p>
-          <p class="cursor-pointer pl-4 font-light">Something random</p>
-        </nav>
-      </aside>
-
-      <!-- Main Content -->
-      <main class="order-1 md:order-none lg:col-span-1 flex-1 space-y-8">
-        <div class="space-y-3">
-          <!-- Breadcrumb -->
-          <div class="flex items-center gap-2 text-xs uppercase font-bold">
-            <a href="/">Blog</a>
-            <span class="pb-1 leading-none">&gt;</span>
-            <a href="/">Affiliate BI Podcast</a>
-          </div>
-
-          <!-- Title -->
-          <h1 class="text-3xl md:text-4xl font-bold leading-tight">
-            Leadership in iGaming with Richard Dennys of Game Lounge
-          </h1>
-
-          <!-- Author Info -->
-          <div class="grid gap-2">
-            <div class="flex items-center gap-2 text-sm">
-              <img src="./assets/author-john-wright.png" alt="author" class="w-9 h-9 rounded-md object-cover" />
-              <p class="font-bold">John Wright</p>
-            </div>
-            <span class="text-gray-600">• Oct 27, 2024 • 8 min</span>
-          </div>
-        </div>
-
-        <!-- Article -->
-        <article class="space-y-5 text-[1.125rem] font-inter">
-          <div class="grid place-items-center">
-            <img src="./assets/blog-image.png" alt="blog-image" class="w-full object-contain" />
-          </div>
-
-          <p>What was the first question I asked <b>Richard Dennys?</b></p>
-          <p>
-            He’s the <a href="/" class="text-blue-600 underline underline-offset-4">CEO of Game Lounge</a>...
-          </p>
-          <p>I think he is a <b>great leader</b>...</p>
-          <p>
-            Or maybe both? <a href="/" class="text-blue-600 underline underline-offset-4">Underlined link</a>
-          </p>
-
-          <h2 class="text-2xl font-semibold leading-snug">This is H2 heading SEO optimized</h2>
-          <h3 class="text-xl font-semibold leading-snug">This is H3 heading SEO optimized</h3>
-          <h4 class="text-lg font-semibold leading-snug">This is H4 heading SEO optimized</h4>
-
-          <blockquote class="border-l-4 border-indigo-800 pl-6 italic text-xl font-medium text-gray-800 bg-gray-50 py-4">
-            “This is a quote block of text where we quote the quote...”
-          </blockquote>
-
-          <p>Numbered or bullet lists?</p>
-          <ul class="list-disc pl-6 space-y-1">
-            <li>this is bullet list 1</li>
-            <li>bullet item 2</li>
-            <li>and number 3</li>
-          </ul>
-
-          <p>also numbered list</p>
-          <ol class="list-decimal pl-6 space-y-1">
-            <li>this item</li>
-            <li>a 2nd item</li>
-            <li>third item</li>
-          </ol>
-        </article>
-      </main>
-
-      <!-- Right Sidebar -->
-      <aside class="flex flex-col gap-6 xl:max-w-xs space-y-4 md:space-y-4 lg:space-y-0 order-3 lg:order-none pt-8 lg:pt-0">
-        <div class="block xl:hidden">
-          <div class="flex items-center gap-4 pb-6 pl-3">
-            <p class="font-bold text-lg flex-1">Article contents</p>
-            <span class="grid">
-              <!-- SVG unchanged -->
-            </span>
-          </div>
-          <nav class="space-y-5 text-sm text-gray-700">
-            <p class="cursor-pointer pl-4 font-light">Article overview</p>
-            <p class="cursor-pointer pl-4 font-light">This is why we can’t have nice things</p>
-            <p class="cursor-pointer pl-4 font-light border-l-2 border-orange-500 pl-3">
-              Why do we have to have this complex menu and what can we do about it?
-            </p>
-            <p class="cursor-pointer pl-4 font-light">5 reasons not to exit</p>
-            <p class="cursor-pointer pl-4 font-light">Something random</p>
-          </nav>
-        </div>
-
-        <div>
-          <!-- Search -->
-          <form class="mb-10">
-            <div class="flex items-center bg-gray-100 rounded-full px-8 py-4">
-              <input type="search" placeholder="Search here" class="bg-transparent text-sm italic w-full placeholder-underline focus:outline-none" />
-              <button type="submit" class="font-bold underline underline-offset-4 text-sm">GO</button>
-            </div>
-          </form>
-  
-          <!-- Authors -->
-          <section class="mb-10">
-            <h2 class="relative font-bold text-xl pb-2 w-fit after:absolute after:bottom-0 after:left-0 after:w-[calc(100%-20px)] after:h-1 after:bg-indigo-900">Authors</h2>
-            <div class="max-h-52 overflow-y-auto scrollbar-thin scrollbar-thumb-[#837ee8] scrollbar-track-[#f4f4f4] space-y-6 mt-6">
-              <div class="flex gap-4 items-center">
-                <img src="./assets/author-john-wright.png" alt="author" class="w-14 h-14 rounded-md object-cover" />
-                <div>
-                  <p class="font-bold">John Wright</p>
-                  <p class="text-sm text-gray-600">Affiliate BI host</p>
-                </div>
-              </div>
-            </div>
-          </section>
-  
-          <!-- Categories -->
-          <section>
-            <h2 class="relative font-bold text-xl pb-2 w-fit after:absolute after:bottom-0 after:left-0 after:w-[calc(100%-20px)] after:h-1 after:bg-indigo-900">Categories</h2>
-            <div class="mt-6 space-y-4 text-sm uppercase font-semibold">
-              <p>Affiliate Podcast</p>
-              <p>Business Intelligence</p>
-              <p>Another Keyword</p>
-            </div>
-          </section>
-        </div>
-      </aside>
     </div>
   </div>
+  <div class="w-full max-w-[1371px] mx-auto">
+    <div class="flex justify-between items-center">
+      <img class=" h-full" src="./src/assets/logo1.svg" alt="">
+      <img class=" h-full" src="./src/assets/logo2.svg" alt="">
+      <img class=" h-full" src="./src/assets/logo3.svg" alt="">
+      <img class=" h-full" src="./src/assets/logo4.svg" alt="">
+      <img class=" h-full" src="./src/assets/logo5.svg" alt="">
+      <img class=" h-full" src="./src/assets/logo 6.svg" alt="">
+      <img class=" h-full" src="./src/assets//image 7.svg" alt="">
+    </div>
+  </div>
+
+  <section class="section_2 mt-10 mb-50">
+    <div class="xl-container">
+      <div class="flex flex-col gap-y-5">
+        <h1 class="font-inter font-bold text-5xl text-[#000000]">A CEO, CFO, SEO, sales rep, data analyst and product owner walk into a bar</h1>
+        <p>They order one drink. The CEO calls it visionary, the CFO calls it a write-off, the SEO makes it trend, the sales rep sells the concept to the next table, the data analyst tracks satisfaction, and the product owner asks for feedback.</p>
+        <p>Whatever your role, StatsDrone has the solution for you!</p>
+
+        <div class="grid grid-cols-2 mt-10 gap-10 font-inter">
+          <div class="card ">
+            <div class="flex justify-between items-center w-full">
+              <div class="flex gap-x-5 shadow-custom p-5 rounded-[50px]">
+                <img src="./src/assets/buildingicon.svg" alt="">
+                <h2 class="text-black font-bold text-2xl">AGENCIES & AFFILIATES</h2>
+              </div>
+              <a class="no-underline text-[#5266D4] text-[18px] font-normal" href="#">read more</a>
+            </div>
+            <div class="text-2xl leading-8 font-normal text-[#3E3E3E]">
+              For individual affiliates with 1 or more sites including agencies managing commercial deals. 
+            </div>
+          </div>
+          <div class="card">
+            <div class="flex justify-between items-center w-full">
+              <div class="flex gap-x-5 shadow-custom p-5 rounded-[50px]">
+                <img src="./src/assets/social-icon.svg" alt="">
+                <h2 class="text-black font-bold text-2xl">AFFILIATES NETOWORKS</h2>
+              </div>
+              <a class="no-underline text-[#5266D4] text-[18px] font-normal" href="#">read more</a>
+            </div>
+            <div class="text-2xl leading-8 font-normal text-[#3E3E3E]">
+              See why more affiliate networks are getting their sub-affiliation powered by StatsDrone.
+            </div>
+          </div>
+          <div class="card">
+            <div class="flex justify-between items-center w-full">
+              <div class="flex gap-x-5 shadow-custom p-5 rounded-[50px]">
+                <img src="./src/assets/search-icon.svg" alt="">
+                <h2 class="text-black font-bold text-2xl">SEO AFFILIATES</h2>
+              </div>
+              <a class="no-underline text-[#5266D4] text-[18px] font-normal" href="#">read more</a>
+            </div>
+            <div class="text-2xl leading-8 font-normal text-[#3E3E3E]">
+              Get all your traffic and revenue data and combine it with GSC & GA4.
+            </div>
+          </div>
+          <div class="card">
+            <div class="flex justify-between items-center w-full">
+              <div class="flex gap-x-5 shadow-custom p-5 rounded-[50px]">
+                <img src="./src/assets/click-icon.svg" alt="">
+                <h2 class="text-black font-bold text-2xl">PPC AFFILIATES</h2>
+              </div>
+              <a class="no-underline text-[#5266D4] text-[18px] font-normal" href="#">read more</a>
+            </div>
+            <div class="text-2xl leading-8 font-normal text-[#3E3E3E]">
+              Get click ID level tracking with dynamic variables.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section_03 text-black font-inter mb-50">
+    <div class="xl-container">
+      <div class="flex flex-col items-center justify-center gap-10">
+          <div class="flex flex-col gap-10 w-full">
+            <h1 class="font-bold text-5xl">Get connected!</h1>
+            <div class="flex justify-between gap-5 items-center">
+              
+              <div class="flex flex-col py-4 px-5 custom-shadow rounded-[8px] bg-[linear-gradient(to_bottom,_white,_#F5F5F5)] w-[219px]">
+                <h4 class="text-[18px] font-bold">Supported Programs</h4>
+                <div class="flex gap-5 justify-between ">
+                  <h1 class="text-4xl font-bold ">1537</h1>
+                  <div class="flex items-center">
+                    <svg width="11.77px" height="15.1px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 3C12.2652 3 12.5196 3.10536 12.7071 3.29289L19.7071 10.2929C20.0976 10.6834 20.0976 11.3166 19.7071 11.7071C19.3166 12.0976 18.6834 12.0976 18.2929 11.7071L13 6.41421V20C13 20.5523 12.5523 21 12 21C11.4477 21 11 20.5523 11 20V6.41421L5.70711 11.7071C5.31658 12.0976 4.68342 12.0976 4.29289 11.7071C3.90237 11.3166 3.90237 10.6834 4.29289 10.2929L11.2929 3.29289C11.4804 3.10536 11.7348 3 12 3Z" fill="#02C30C"></path> </g></svg>
+                    <h2 class="text-2xl font-medium">+37</h2>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-col py-4 px-5 custom-shadow rounded-[8px] bg-[linear-gradient(to_bottom,_white,_#F5F5F5)] w-[219px]">
+                <h4 class="text-[18px] font-bold">Closed Programs</h4>
+                <div class="flex gap-5 justify-between ">
+                  <h1 class="text-4xl font-bold ">1068</h1>
+                  <div class="flex items-center">
+                    <svg width="11.77px" height="15.1px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 3C12.2652 3 12.5196 3.10536 12.7071 3.29289L19.7071 10.2929C20.0976 10.6834 20.0976 11.3166 19.7071 11.7071C19.3166 12.0976 18.6834 12.0976 18.2929 11.7071L13 6.41421V20C13 20.5523 12.5523 21 12 21C11.4477 21 11 20.5523 11 20V6.41421L5.70711 11.7071C5.31658 12.0976 4.68342 12.0976 4.29289 11.7071C3.90237 11.3166 3.90237 10.6834 4.29289 10.2929L11.2929 3.29289C11.4804 3.10536 11.7348 3 12 3Z" fill="#02C30C"></path> </g></svg>
+                    <h2 class="text-2xl font-medium">+24</h2>
+                  </div>
+                </div>
+              </div>
+
+              <div class="flex flex-col py-4 px-5 custom-shadow rounded-[8px] bg-[linear-gradient(to_bottom,_white,_#F5F5F5)] w-[219px]">
+                <h4 class="text-[18px] font-bold">Platforms</h4>
+                <div class="flex gap-5 justify-between ">
+                  <h1 class="text-4xl font-bold ">120+</h1>
+                </div>
+              </div>
+
+              <div class="flex flex-col py-4 px-5 custom-shadow rounded-[8px] bg-[linear-gradient(to_bottom,_white,_#F5F5F5)] w-[219px]">
+                <h4 class="text-[18px] font-bold">Team members</h4>
+                <div class="flex gap-5 justify-between ">
+                  <h1 class="text-4xl font-bold ">13</h1>
+                </div>
+              </div>
+
+            <button class=" flex items-center justify-center text-[18px] font-bold custom-shadow rounded-[8px] bg-[linear-gradient(to_bottom,_white,_#71FFC6)] h-[88px] w-[283px] ">Request Program</button>
+            </div>
+          </div>
+
+          <div>
+            <img src="./src/assets/phone-integration.png" alt="">
+          </div>
+          <p>How do you connect your programs? You can connect with credentials (username & password), API or CSV upload. </p>
+      </div>
+    </div>
+  </section>
+  <section class="section_04 text-black mb-50 mt-20">
+    <div class="xl-container flex flex-col gap-10 mb-10">
+      <div class="flex justify-between items-start">
+        <h1 class="font-bold text-5xl">Integrations!</h1>
+        <a href="#" class="no_underline text-[#5266D4] text-[18px] font-normal">see integration</a>
+      </div>
+
+      <div class="grid grid-cols-3 mt-5 gap-10">
+        <div class="flex flex-col gap-10 shadow-custom p-7  bg-[#2E2F5B] rounded-[8px] ">
+          <div class="flex gap-5">
+            <div class="bg-white rounded-[6px] p-2">
+              <img src="src/assets/looker-icon 2.svg" alt="Looker Studio icon">
+            </div>
+            <h3 class="text-white font-medium text-2xl">Looker Studio</h3>
+          </div>
+          <p class="text-white font-normal text-[18px] leading-normal">
+            Export your data into Google Looker Studio
+          </p>
+        </div>
+        <div class="flex flex-col gap-10 p-7 bg-[url('assets/looker-bg.svg')] bg-[center_40%] shadow-custom w-[388px] h-[220px]">
+          <div class="flex gap-5">
+            <div class="bg-white shadow-icon rounded-[6px] p-2">
+              <img src="src/assets/looker-icon 2.svg" alt="Looker Studio icon">
+            </div>
+              <h3 class="text-white font-medium text-2xl">Looker Studio</h3>
+            </div>
+            <p class="text-white font-normal text-[18px] leading-normal">
+              Export your data into Google Looker Studio
+            </p>  
+        </div>
+        <div class="flex flex-col gap-10 shadow-custom p-7  bg-[#2E2F5B] rounded-[8px] ">
+          <div class="flex gap-5">
+            <div class="bg-white shadow-icon rounded-[6px] p-2">
+              <img src="src/assets/looker-icon 2.svg" alt="Looker Studio icon">
+            </div>
+            <h3 class="text-white font-medium text-2xl">Looker Studio</h3>
+          </div>
+          <p class="text-white font-normal text-[18px] leading-normal">
+            Export your data into Google Looker Studio
+          </p>
+        </div>
+      </div>
+      
+      <div class="grid grid-cols-3 mt-5 gap-10">
+        <div class="flex flex-col gap-5 shadow-custom p-7 rounded-[8px] ">
+          <div class="flex gap-5">
+            <div class="bg-white shadow-icon shadow-icon rounded-[6px] p-2">
+              <img src="src/assets/bigquery-icon.svg" alt="Looker Studio icon">
+            </div>
+            <h3 class="text-black font-medium text-2xl">BigQuery</h3>
+          </div>
+          <p class="text-black font-normal text-[18px] leading-normal">
+            Connect your data with BigQuery
+          </p>
+        </div>
+        <div class="flex flex-col gap-5 shadow-custom p-7 rounded-[8px] ">
+          <div class="flex gap-5">
+            <div class="rounded-[6px] p-2">
+              <img src="src/assets/looker studio logo.svg" alt="Looker Studio icon">
+            </div>
+            <h3 class="text-black font-medium text-2xl">AWS</h3>
+          </div>
+          <p class="text-black font-normal text-[18px] leading-normal">
+            Connect your data with Amazon Web Services  
+          </p>
+        </div>
+        <div class="flex flex-col gap-5 shadow-custom p-7 rounded-[8px] ">
+          <div class="flex gap-5">
+            <div class="bg-white shadow-icon shadow-icon rounded-[6px] p-2">
+              <img src="src/assets/tableau-icon 2.svg" alt="Looker Studio icon">
+            </div>
+            <h3 class="text-black font-medium text-2xl">Tableau</h3>
+          </div>
+          <p class="text-black font-normal text-[18px] leading-normal">
+            Visualize all of your data with Tableau data visualizations
+          </p>
+        </div>
+        <div class="flex flex-col gap-5 shadow-custom p-7 rounded-[8px] ">
+          <div class="flex gap-5">
+            <div class="bg-white shadow-icon shadow-icon rounded-[6px] p-2">
+              <img src="src/assets/looker-icon 2.svg" alt="Looker Studio icon">
+            </div>
+            <h3 class="text-black font-medium text-2xl">Looker Studio</h3>
+          </div>
+          <p class="text-black font-normal text-[18px] leading-normal">
+            Export your data in Google Looker Studio
+          </p>
+        </div>
+        <div class="flex flex-col gap-5 shadow-custom p-7 rounded-[8px] ">
+          <div class="flex gap-5">
+            <div class="bg-white shadow-icon shadow-icon rounded-[6px] p-2">
+              <img src="src/assets/click-finger.svg" alt="Looker Studio icon">
+            </div>
+            <h3 class="text-black font-medium text-2xl">Dynamic variables</h3>
+          </div>
+          <p class="text-black font-normal text-[18px] leading-normal">
+            Get click ID level tracking from supported programs
+          </p>
+        </div>
+        <div class="flex flex-col gap-5 shadow-custom p-7 rounded-[8px] ">
+          <div class="flex gap-5">
+            <div class="bg-white shadow-icon shadow-icon rounded-[6px] p-2">
+              <img src="src/assets/mailbox_icon 1.svg" alt="Looker Studio icon">
+            </div>
+            <h3 class="text-black font-medium text-2xl">Postbacks</h3>
+          </div>
+          <p class="text-black font-normal text-[18px] leading-normal">
+            Comming soon!
+          </p>
+        </div>
+
+      </div>
+
+      <h1 class="mt-5 text-5xl font-bold">How accurate is StatsDrone? Ask our users</h1>
+      <div class="grid grid-cols-3 mt-5 gap-10">
+        <div class="flex flex-col gap-8 shadow-custom p-6">
+          <div class="flex flex-col gap-2 items-center pt-5">
+            <img src="src/assets/find.co logo.svg" alt="">
+            <span class="text-[18px] text-[#8E86FF]">find.co</span>
+          </div>
+          <p class="leading-6 text-base text-[#696969]">
+            StatsDrone are the most accurate stats app we have tried. 
+            When something isn’t accurate, they usually fix it same day.
+          </p>
+          <span class="border border-[#E0E0E0]"></span>
+          <p class="leading-6 text-base text-[#696969]">
+            The whole team are always improving the app and building
+             features that we ask for. Highly recommended!
+          </p>
+          <a href="#" class="text-right no_underline text-[#5266D4] text-[18px] font-normal">read full review</a>
+        </div>
+        <div class="flex flex-col gap-8 shadow-custom p-6">
+          <div class="flex flex-col gap-2 items-center pt-5">
+            <img src="src/assets/blue window logo.svg" alt="">
+            <span class="text-[18px] text-[#8E86FF]">find.co</span>
+          </div>
+          <p class="leading-6 text-base text-[#696969]">
+            The app is very accurate. 
+          </p>
+          <span class="border border-[#E0E0E0]"></span>
+          <p class="leading-6 text-base text-[#696969]">
+            We were going to not use StatsDrone but then we changed our mind because all our CTOs keep leaving
+             our company and we would be really fucked without StatsDrone!
+          </p>
+        </div>
+        <div class="flex flex-col gap-8 shadow-custom p-6">
+          <div class="flex flex-col gap-2 items-center pt-5">
+            <img src="src/assets/olika one logo.svg" alt="">
+            <span class="text-[18px] text-[#8E86FF]">find.co</span>
+          </div>
+          <p class="leading-6 text-base text-[#696969]">
+            StatsDrone is the best!
+          </p>
+          <span class="border border-[#E0E0E0]"></span>
+          <p class="leading-6 text-base text-[#696969]">
+            We were the first user to try the dynamic variables feature and it worked seemless and was accurate. 
+            We are very pleased with the app and the customer support. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section_05 bg-gradient-to-b from-[#0B0431] to-[#050214]">
+    <div class="xl-container py-30 flex flex-col gap-y-20">
+      <div class="flex flex-col gap-8">
+        <h1 class="text-white text-5xl font-bold">What is Revenue Leak?</h1>
+        <p class="text-white font-medium text-[28px]">The dark side of affiliate marketing</p>
+      </div>
+      <div class="h-[745px]">
+        <img class="w-auto max-h-full object-cover" src="./src/assets/revebye-leak.svg" alt="">
+      </div>
+    </div>
+  </section>
+  <section class="section_06">
+    <div class="xl-container py-30">
+      <div class="flex flex-col gap-20">
+        <h1 class="text-black">Data privacy for you</h1>
+        <div class="flex justify-between gap-20">
+            <img class="" src="./src/assets/privacy.svg" alt="">
+          <div class="flex flex-col gap-10">
+            <p>Your data privacy is very important to us and 
+              we’ve done everything we can to protect that.</p>
+            <p>We cannot see your affiliate traffic and revenue data. </p>
+            <p>You can have your data hosted on our server, on your own server and for large enterprise clients we also have on-premises version of the app. </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section_07 bg-gradient-to-b from-[#0B0431] to-[#050214] ">
+    <div class="xl-container flex flex-col gap-10 pt-10">
+      <div><img src="./src/assets/nav-logo.svg" alt=""></div>
+      <h1>Features</h1>
+      <div class="flex  w-[80%] gap-5 flex-wrap pt-5">
+        <p class="border-[2px] rounded-[50px] px-4 text-white whitespace-nowrap">dynamic variable</p>
+        <p class="border-[2px] rounded-[50px] px-4 text-white whitespace-nowrap">deal CRM</p>
+        <p class="border-[2px] rounded-[50px] px-4 text-white whitespace-nowrap">invoice generator</p>
+        <p class="border-[2px] rounded-[50px] px-4 text-white whitespace-nowrap">campagin analysis</p>
+        <p class="border-[2px] rounded-[50px] px-4 text-white whitespace-nowrap">BI alerts</p>
+        <p class="border-[2px] rounded-[50px] px-4 text-white whitespace-nowrap"> flat fees</p>
+        <p class="border-[2px] rounded-[50px] px-4 text-white whitespace-nowrap"> affiliate network</p>
+      </div>
+        <div class="flex justify-center"><img class="w-[95%]" src="src/assets/screenshot.svg" alt=""></div>
+    </div>
+  </section>
+  <section class="section_07">
+    <div class="xl-container pt-20">
+      <div class="flex flex-col gap-15">
+        <div class="flex justify-between items-center">
+          <h1 class="text-black">Frequently Asked Questions</h1>
+          <a href="#" class="bg-[#F4F4F4] p-2 rounded-[8px]">help centre</a>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
-
-
 </html>
